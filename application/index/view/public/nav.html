@@ -1,0 +1,43 @@
+<div class="search">
+    <img src="__STATIC__/index/image/logo.png" />
+
+</div>
+
+<div class="nav-bar-header">
+    <div class="nav-inner">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <span class="item">全部分类</span>
+                <div class="left-menu">
+                    {volist name="cates" id="cate"}
+                    <div class="level-item">
+                        <div class="first-level">
+                            <dl>
+                                <dt class="title"><a href="" target="_top">{$cate[0]}</a></dt>
+                                {volist name="$cate[1]" id="sub_cate" length="2"}
+                                <dd><a href="" target="_top" class="">{$sub_cate.name}</a></dd>
+                                {/volist}
+                            </dl>
+                        </div>
+                        <div class="second-level">
+                            <div class="section">
+                                <div class="section-item clearfix no-top-border">
+                                    <h3>其他分类</h3>
+                                    <ul>
+                                        {volist name="cate[1]" id="vo"}
+                                        <li><a href="" target="_blank"  class="hot">{$vo.name}</a></li>
+                                        {/volist}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/volist}
+                </div>
+            </li>
+            <li class="nav-item"><a class="item first active">首页</a></li>
+            <li class="nav-item"><a class="item">团购</a></li>
+            <li class="nav-item"><a class="item">商户</a></li>
+        </ul>
+    </div>
+</div>
